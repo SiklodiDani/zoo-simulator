@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Animal from './components/animal';
+import FeedAnimals from './components/feedAnimals';
+import SkipTime from './components/skipTime';
+import Time from './components/time';
+
+//* I made the buttons to feed the animals and skip the time, and the time counter, into commponents instead of writing the code
+//* for them  in here because it's easier to add more functionality and make edits without having the App.js file feel too cluttered.
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Time />
+			<Animal />
+			<div className="buttons">
+				<FeedAnimals />
+				<SkipTime />
+			</div>
+		</div>
+	);
 }
 
 export default App;
